@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOUI CAMERA</title>
+<style>
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background: #0b0b0b;
+  color: white;
+  margin: 0;
+}
+
+/* 🔥 HERO HEADER */
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  padding: 100px 120px 60px;
+}
+
+.hero img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.hero-text h1 {
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 4px;
+  margin: 0 0 20px 0;
+}
+
+.stats {
+  font-size: 12px;
+  letter-spacing: 3px;
+  opacity: 0.6;
+  margin-bottom: 30px;
+}
+
+.bio {
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* 🔥 TABS */
+
+.tabs {
+  display: flex;
+  gap: 60px;
+  padding: 0 120px 50px;
+  font-size: 11px;
+  letter-spacing: 4px;
+}
+
+.tab {
+  cursor: pointer;
+  opacity: 0.35;
+  transition: 0.4s;
+}
+
+.tab.active {
+  opacity: 1;
+}
+
+/* 🔥 MASONRY GRID */
+
+.grid {
+  display: none;
+  column-count: 3;
+  column-gap: 60px;
+  padding: 0 120px 150px;
+}
+
+.grid.active {
+  display: block;
+}
+
+.grid img {
+  width: 100%;
+  margin-bottom: 60px;
+  transform: scale(0.95);
+  opacity: 0.85;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  break-inside: avoid;
+  cursor: pointer;
+}
+
+.grid img:hover {
+  transform: scale(1.12);
+  opacity: 1;
+}
+
+.series img {
+  margin-bottom: 20px;
+}
+
+.rand-0 { margin-top: 0px; }
+.rand-1 { margin-top: 60px; }
+.rand-2 { margin-top: 120px; }
+
+@media (max-width: 1200px) {
+  .grid { column-count: 2; }
+}
+
+@media (max-width: 700px) {
+  .grid { column-count: 1; }
+  .hero { flex-direction: column; align-items: flex-start; padding: 60px 40px; }
+  .tabs { padding: 0 40px 40px; }
+  .grid { padding: 0 40px 100px; }
+}
+
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <img src="../profile.jpg" />
+  <div class="hero-text">
+    <h1>RHEE DOUI</h1>
+    <div class="stats">20 POSTS · 217 FOLLOWERS · 153 FOLLOWING</div>
+    <div class="bio">
+      This is Only Archiving.<br>
+      This is not my Portfolio.
+    </div>
+  </div>
+</div>
+
+<div class="tabs">
+  <div class="tab active" onclick="showTab('posts', this)">POSTS</div>
+  <div class="tab" onclick="showTab('stories', this)">STORIES</div>
+</div>
+
+<div id="posts" class="grid active">
+<img class="rand-1" src="../media\posts\202602\18397071067181731.jpg" loading="lazy"/><img class="rand-0" src="../media\posts\202602\18185777977321499.jpg" loading="lazy"/><img class="rand-0" src="../media\posts\202602\18173410228379527.jpg" loading="lazy"/><img class="rand-0" src="../media\posts\202410\18157892857321966.jpg" loading="lazy"/><img class="rand-1" src="../media\posts\202409\18145739302333194.jpg" loading="lazy"/><img class="rand-1" src="../media\posts\202408\18090328288460361.jpg" loading="lazy"/><img class="rand-0" src="../media\posts\202602\18089969345279768.jpg" loading="lazy"/><img class="rand-0" src="../media\posts\202602\18088126775120958.jpg" loading="lazy"/><img class="rand-1" src="../media\posts\202408\18087306283486950.jpg" loading="lazy"/><img class="rand-1" src="../media\posts\202408\18085791334468933.jpg" loading="lazy"/><img class="rand-1" src="../media\posts\202410\18081542941539214.jpg" loading="lazy"/><img class="rand-1" src="../media\posts\202602\18072925946453796.jpg" loading="lazy"/><img class="rand-2" src="../media\posts\202408\18051434170783552.jpg" loading="lazy"/><img class="rand-0" src="../media\posts\202511\18049843826348374.jpg" loading="lazy"/><img class="rand-0" src="../media\posts\202410\18045881447052408.jpg" loading="lazy"/><img class="rand-0" src="../media\posts\202602\18035440145565547.jpg" loading="lazy"/><img class="rand-1" src="../media\posts\202410\18027841436143362.jpg" loading="lazy"/><img class="rand-0" src="../media\posts\202410\18022645865531690.jpg" loading="lazy"/><img class="rand-0" src="../media\posts\202408\18018538844176912.jpg" loading="lazy"/><img class="rand-2" src="../media\posts\202403\18018183062132550.jpg" loading="lazy"/><img class="rand-1" src="../media\posts\202405\18009984860428328.jpg" loading="lazy"/><img class="rand-0" src="../media\posts\202409\18006581540629917.jpg" loading="lazy"/><img class="rand-0" src="../media\posts\202410\18004556135660585.jpg" loading="lazy"/><img class="rand-0" src="../media\posts\202602\17971365974848551.jpg" loading="lazy"/><img class="rand-0" src="../media\posts\202512\17931953220132762.jpg" loading="lazy"/><img class="rand-0" src="../media\posts\202602\17931696420081207.jpg" loading="lazy"/><img class="rand-1" src="../media\posts\202602\17929991139193935.jpg" loading="lazy"/><img class="rand-2" src="../media\posts\202406\17910558077969161.jpg" loading="lazy"/><img class="rand-1" src="../media\posts\202410\17904510965960168.jpg" loading="lazy"/><img class="rand-1" src="../media\posts\202602\17903866296201040.jpg" loading="lazy"/>
+</div>
+
+<div id="stories" class="grid">
+<img class="rand-1" src="../media\stories\202601\18558915586004941.jpg" loading="lazy"/><img class="rand-0" src="../media\stories\202601\18554409568005082.jpg" loading="lazy"/><img class="rand-1" src="../media\stories\202601\18552415471010816.jpg" loading="lazy"/><img class="rand-2" src="../media\stories\202512\18546199807053659.jpg" loading="lazy"/><img class="rand-0" src="../media\stories\202512\18545357857031514.jpg" loading="lazy"/><img class="rand-2" src="../media\stories\202512\18544562191008993.jpg" loading="lazy"/><img class="rand-1" src="../media\stories\202512\18541792066004885.jpg" loading="lazy"/><img class="rand-0" src="../media\stories\202601\18521349979071867.jpg" loading="lazy"/><img class="rand-0" src="../media\stories\202602\18501260677073336.jpg" loading="lazy"/><img class="rand-0" src="../media\stories\202602\18451006288101481.jpg" loading="lazy"/><img class="rand-2" src="../media\stories\202602\18450977998096165.jpg" loading="lazy"/><img class="rand-2" src="../media\stories\202405\18447153865055503.jpg" loading="lazy"/><img class="rand-0" src="../media\stories\202407\18445729015037701.jpg" loading="lazy"/><img class="rand-1" src="../media\stories\202602\18445059403104197.jpg" loading="lazy"/><img class="rand-2" src="../media\stories\202406\18440284822010059.jpg" loading="lazy"/><img class="rand-2" src="../media\stories\202405\18438942652014553.jpg" loading="lazy"/><img class="rand-2" src="../media\stories\202405\18437321623036959.jpg" loading="lazy"/><img class="rand-1" src="../media\stories\202405\18434233654045763.jpg" loading="lazy"/><img class="rand-0" src="../media\stories\202404\18432062593015478.jpg" loading="lazy"/><img class="rand-2" src="../media\stories\202404\18423720172019075.jpg" loading="lazy"/><img class="rand-0" src="../media\stories\202512\18423346129116867.jpg" loading="lazy"/><img class="rand-2" src="../media\stories\202512\18421801000117252.jpg" loading="lazy"/><img class="rand-1" src="../media\stories\202512\18417418597138712.jpg" loading="lazy"/><img class="rand-1" src="../media\stories\202601\18415279531143576.jpg" loading="lazy"/><img class="rand-1" src="../media\stories\202512\18414212011190010.jpg" loading="lazy"/><img class="rand-0" src="../media\stories\202512\18413959867191371.jpg" loading="lazy"/><img class="rand-1" src="../media\stories\202408\18411309292076063.jpg" loading="lazy"/><img class="rand-1" src="../media\stories\202601\18405039850120133.jpg" loading="lazy"/><img class="rand-2" src="../media\stories\202406\18401190586076263.jpg" loading="lazy"/><img class="rand-0" src="../media\stories\202601\18400841986121246.jpg" loading="lazy"/>
+</div>
+
+<script>
+function showTab(id, el) {
+  document.querySelectorAll('.grid').forEach(g => g.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  el.classList.add('active');
+}
+</script>
+
+</body>
+</html>
